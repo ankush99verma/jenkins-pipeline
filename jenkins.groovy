@@ -1,17 +1,17 @@
-job('Nodejs automated pipeline') {
-  scm {
-    git('https://github.com/ankush99verma/jenkinsdemo.git') {
-      node / gitConfigName('DSL User')
-      node / gitConfigEmail('v99ankush@gmail.com')
+job('Nodejs example'){
+  scm{
+    git('https://github.com/ankush99verma/jenkinsdemo.git'){
+      node / gitconfigname('DSL User')
+      node / gitconfigEmail('v99ankush@gmail.com')
     }
   }
-  triggers {
+  triggers{
     scm('H/5 * * * *')
   }
-  wrappers {
-    node.js('nodejs')
+  wrappers{
+    nodejs('nodejs')
   }
-  steps {
-    shell('npm install')
+  steps{
+    shell("npm install")
   }
-} 
+}
