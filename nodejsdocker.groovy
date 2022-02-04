@@ -9,7 +9,7 @@ job('Nodejs automated pipeline') {
     scm('H/5 * * * *')
   }
   wrappers {
-    node.js('nodejs')
+    nodejs('nodejs')
   }
   steps {
     dockerBuildAndPublish {
