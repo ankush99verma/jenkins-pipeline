@@ -13,7 +13,7 @@ job('Nodejs automated pipeline') {
   }
   steps {
     dockerBuildAndPublish {
-      repositoryName('ankush99verma/jenkins-pipeline')
+      repositoryName('verma99ankush/jenkins-build-repo')
       tag('${GIT_REVISION, length=9}')
       registryCredentials('dockerhub')
       forcePull(false)
