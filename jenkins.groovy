@@ -14,7 +14,7 @@ job('Nodejs example'){
   steps{
     jsLint {
       includePattern('**/*.js')
-      logFile('/var/lib/jenkins/workspace/Nodejs/jslint.xml')
+      logFile('jslint.xml')
       arguments('-Dadsafe=true, -Dcontinue=true')
     }
     
