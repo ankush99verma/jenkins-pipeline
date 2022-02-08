@@ -12,6 +12,11 @@ job('Nodejs example'){
     nodejs('nodejs')
   }
   steps{
-    shell("npm install")
+    jslint {
+      includePattern('**/*.js')
+      logFile('var/lib/jslint/jslint.xml')
+      arguments('-Dadsafe=true, -Dcontinue=true')
+    }
+    
   }
 }
