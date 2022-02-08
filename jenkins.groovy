@@ -12,7 +12,7 @@ job('Nodejs example'){
     nodejs('nodejs')
   }
   steps{
-    jslint {
+    jsLint {
       includePattern('**/*.js')
       logFile('var/lib/jslint/jslint.xml')
       arguments('-Dadsafe=true, -Dcontinue=true')
